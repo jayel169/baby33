@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Patients List</title></head>
+<body>
+    <h1>Registered Patients</h1>
+    <ul>
+        {% for patient in patients %}
+            <li>
+                {{ patient.name }} ({{ patient.age }}, {{ patient.gender }}) 
+                - <a href="/patient/{{ patient.id }}/edit">Edit Lab Results</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Register New Patient</a> | <a href="/analytes/new">Create New Analyte</a>
+</body>
+</html>
